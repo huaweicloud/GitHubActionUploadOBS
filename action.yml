@@ -1,0 +1,20 @@
+# action.yml
+name: 'Chenyt26 Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  access_key:
+    description: "The name of the storage account container these assets will be uploaded to"
+    required: true
+  secret_key:
+    description: "The name of the directory you want to upload"
+    required: true
+  file_path:
+    description: "The name of the directory you want to upload"
+    required: false
+  obsutil_url:
+    description:
+    required: true
+    default: 'https://obs-community.obs.cn-north-1.myhuaweicloud.com/obsutil/current/obsutil_linux_amd64.tar.gz'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
