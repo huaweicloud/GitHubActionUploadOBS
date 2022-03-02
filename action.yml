@@ -3,18 +3,25 @@ name: 'Huawei OBS Upload'
 description: 'Greet someone and record the time'
 inputs:
   access_key:
-    description: "The name of the storage account container these assets will be uploaded to"
+    description: "Access key id"
     required: true
   secret_key:
-    description: "The name of the directory you want to upload"
+    description: "Secret access key"
     required: true
-  file_path:
-    description: "The name of the directory you want to upload"
+  region:
+    description: 'Region'
     required: false
+    default: 'cn-north-4'
+  bucket_name:
+    description: "The name of the bucket you want to upload"
+    required: true
   obsutil_url:
     description:
     required: true
     default: 'https://obs-community.obs.cn-north-1.myhuaweicloud.com/obsutil/current/obsutil_linux_amd64.tar.gz'
+  file_path:
+    description: "The name of the file or directory you want to upload"
+    required: true  
 runs:
   using: 'docker'
   image: 'Dockerfile'
