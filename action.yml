@@ -1,5 +1,5 @@
 # action.yml
-name: 'Chenyt26 Hello World'
+name: 'Huawei OBS Upload'
 description: 'Greet someone and record the time'
 inputs:
   access_key:

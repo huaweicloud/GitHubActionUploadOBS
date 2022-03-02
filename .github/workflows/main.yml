@@ -1,18 +1,12 @@
-on:
-  push:
-    branches:
-      - obs-test1
+on: [push]
 
 jobs:
-  hello_world_job:
+  upload_file:
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Upload To OBS Test
+      - name: Upload To Huawei OBS
         uses: ./
         id: obs
         with:
