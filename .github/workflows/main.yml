@@ -1,0 +1,15 @@
+on: [push]
+
+jobs:
+  upload_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Upload To Huawei OBS
+        uses: ./
+        id: obs
+        with:
+          access_key: ${{ secrets.ACCESSKEY }}
+          secret_key: ${{ secrets.SECRETACCESSKEY }}
+          file_path: README.md
