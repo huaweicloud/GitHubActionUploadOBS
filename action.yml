@@ -1,6 +1,6 @@
 # action.yml
 name: 'Huawei Cloud OBS Upload'
-description: 'Greet someone and record the time'
+description: 'Huawei Cloud OBS Upload'
 inputs:
   access_key:
     description: "Access key id"
